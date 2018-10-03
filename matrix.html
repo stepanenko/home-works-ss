@@ -26,18 +26,16 @@ function diagonalMatrix (n) {
   return matrix
 }
 
-var matrix = diagonalMatrix(+prompt('Diagonal Matrix Order:'))
+var matrix = diagonalMatrix(+prompt('Matrix Size?'))
 
 console.log(beautify(matrix))
 console.log(matrix)
 
-
-
 // For visualization purposes
 function beautify (matrix) {
-  return matrix.map(function (e) {
+  return matrix.map(e => {
     return e.join('\t')
-  }).join('\n\n\n\n')
+  }).join('\n\n')
 }
 
 
