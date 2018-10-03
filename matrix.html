@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Matrix</title>
+</head>
+<body>
+
+<script>
+
+function diagonalMatrix (n) {
+  let matrix = [];
+  let row;
+
+  for (let i = n; i > 0; i--) {
+    let x = i*(i-1)/2 + 1;
+    let dx = i;
+
+    matrix.push(row = []);
+    
+    for (let j = n; j > 0; j--) {
+      row.push(x)
+      x += (i < j ? ++dx : dx--)
+    }
+  }
+  return matrix
+}
+
+var matrix = diagonalMatrix(+prompt('Diagonal Matrix Order:'))
+
+console.log(beautify(matrix))
+console.log(matrix)
+
+
+
+// For visualization purposes
+function beautify (matrix) {
+  return matrix.map(function (e) {
+    return e.join('\t')
+  }).join('\n\n\n\n')
+}
+
+
+
+
+</script>
+</body>
+</html>
