@@ -1,0 +1,4 @@
+Task:
+- use previous node project
+- use json file to store and show its content to browser
+- use PUG and loop to show json 'customers'

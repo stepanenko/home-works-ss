@@ -1,0 +1,3 @@
+Install ESLint to prev projects
+Install Airbnb with ESLint 
+ - set airbnb to ES5 and ES6 

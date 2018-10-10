@@ -11,7 +11,6 @@ server.on('request', (req, res) => {
         // console.log(data.toString()) // showing html file content
         res.end(data);
       });
-      break;
     }
   }
 });
