@@ -3,7 +3,7 @@
         "browser": true,
         "es6": true
     },
-    "extends": "eslint:recommended",
+    "extends": "airbnb",
     "parserOptions": {
         "ecmaVersion": 2018,
         "sourceType": "module"
@@ -29,6 +29,7 @@
                 "before": true
             }
         ],
+        "no-console": 0,
         "block-scoped-var": "error",
         "block-spacing": "error",
         "brace-style": "error",

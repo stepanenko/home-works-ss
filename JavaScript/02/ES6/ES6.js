@@ -13,49 +13,51 @@ const nat = n => {
   }
   return array;
 }
-console.log("Array length: ", nat(10));
+//console.log('Array length: ', nat(10));
 
 // === Task 2 - 178 b ===
 
 const natur = n => {
-  const arr1 = [];
-  const arr2 = [];
+  let arr1 = [];
+  let arr2 = [];
   for (let i = 0; i < n; i++) {
-    if (i % 3 == 0) arr1.push(i);
-    if (i % 5 != 0) arr2.push(i);
+    if (i % 3 == 0) arr1 = [...arr1, i];
+    if (i % 5 != 0) arr2 = [...arr2, i];
   }
   return [arr1, arr2];
 }
-console.log("Arrays of 3s and n5: ", natur(50));
+//console.log('Arrays of 3s and n5: ', natur(50));
 
 // === Task 3 - 178 v ===
 
 const square = n => {
-  const arr = [];
+  let arr = [];
   for (let i = 0; i < n; i++) {
      if (i % 2 === 0) {
-       arr.push(i * i);
+       arr = [...arr, i];
      }
   }
   return { length: arr.length, array: arr}
 }
-console.log(square(10))
+
+//console.log(square(10))
 
 // === Task 4 - 554 ===
 
 const tris = n => {
-  const tri = [];
+  let tri = [];
   for (let i = 1; i < n; i++) {
     let current = i * i;
     let next = (i + 1) * (i + 1);
     let sub = next - current;
     if ( Math.sqrt(sub) % 1 === 0) {
-      tri.push([Math.sqrt(sub), Math.sqrt(current), Math.sqrt(next)]);
+      tri = [...tri, ([Math.sqrt(sub), Math.sqrt(current), Math.sqrt(next)])];
     }
   }
   return tri
 }
-console.log("Pythagorean triple: \n", tris(100))
+
+console.log('Pythagorean triple: \n', tris(100))
 
 
 // About Pythagorean triple:
