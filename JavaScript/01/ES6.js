@@ -1,8 +1,10 @@
+// import { sqrt } from './mathES6';
+// console.log(sqrt);
+
 // === Task 1 - 178 a ===
 function nat(n) {
   const arr = [];
   const array = [];
-  let k = 0;
   for (let i = 0; i < n; i++) {
     arr.push(i);
     if (i % 2 !== 0) array.push(i)
@@ -17,7 +19,6 @@ function nat(n) {
 function natur(n) {
   const arr1 = [];
   const arr2 = [];
-  let k = 0;
   for (let i = 0; i < n; i++) {
     if (i % 3 == 0) arr1.push(i);
     if (i % 5 != 0) arr2.push(i);
@@ -54,7 +55,8 @@ function tris(n) {
   }
   return tri
 }
-console.log(tris(100))
+ console.log('Pythagorean triple: \n', tris(100))
 
 
+// About Pythagorean triple:
 // http://www.athens.kiev.ua/pifagorovi-trijki/
