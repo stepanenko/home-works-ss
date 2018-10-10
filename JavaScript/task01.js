@@ -1,3 +1,4 @@
+// === Task 1 - 178 a ===
 function nat(n) {
   const arr = [];
   const array = [];
@@ -9,7 +10,9 @@ function nat(n) {
   return array.length;
 }
 
-//console.log(nat(10));
+//console.log('Array length: ', nat(10));
+
+// === Task 1 - 178 b ===
 
 function natur(n) {
   const arr1 = [];
@@ -22,4 +25,4 @@ function natur(n) {
   return [arr1, arr2];
 }
 
-console.log(natur(50));
+console.log('Arrays of 3s and n5: ', natur(50));
