@@ -1,4 +1,4 @@
-const tris = require('../../02/ES5/ES5').tris;
+const { tris } = require('./ES5');
 
 const arg = process.argv[2];
 

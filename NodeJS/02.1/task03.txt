@@ -1,0 +1,2 @@
+
+NODE TASK: solution search key words: env [environment variables], argv, process command, host, config, port [ using '||' ], set [to set env variables]

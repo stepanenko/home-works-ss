@@ -1,5 +1,3 @@
-// import { sqrt } from './mathES6';
-// console.log(sqrt);
 
 // === Task 1 - 178 a ===
 const nat = n => {

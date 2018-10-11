@@ -1,3 +1,4 @@
+require('dotenv').config(); // will set env variables from '.env'
 const express = require('express');
 const path = require('path');
 
@@ -22,10 +23,13 @@ app.get('/clients/add', (req, res) => {
   });
 });
 
-process.argv.forEach((val, i, arr) => {
-  console.log(i + ' : ' + val)
+app.get('/api/posts/:year/:month', (req, res) => {
+  res.send(req.params);
 });
 
-app.listen(3000, () => {
-  console.log('Server started on port 3000...')
+const port = process.env.PORT || 3000;
+console.log('ENV PORT: ', process.env.PORT);
+
+app.listen(port, () => {
+  console.log(`Server started on port ${port}...`)
 });

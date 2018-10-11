@@ -1,4 +1,4 @@
-var { natur } = require('../../02/ES5/ES5');
+var { natur } = require('./ES5');
 const readline = require('readline');
 
 const rl = readline.createInterface({

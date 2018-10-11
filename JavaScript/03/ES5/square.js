@@ -1,4 +1,4 @@
-const square = require('../../02/ES5/ES5').square;
+const { square } = require('./ES5');
 
 const arg = process.argv[2];
 
