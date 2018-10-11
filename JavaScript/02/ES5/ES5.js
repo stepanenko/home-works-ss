@@ -1,5 +1,5 @@
 var sqrt = require('./mathES5');
-//console.log(sqrt(25));
+// console.log(sqrt(25));
 
 // === Task 1 - 178 a ===
 
@@ -13,7 +13,7 @@ function nat(n) {
     return array.length;
 }
 
-//console.log('Array length: ', nat(10));
+// console.log('Array length: ', nat(10));
 
 // === Task 2 - 178 b ===
 
@@ -27,7 +27,7 @@ function natur(n) {
     return [arr1, arr2];
 }
 
-//console.log('Arrays of 3s and n5: ', natur(50));
+// console.log('Arrays of 3s and n5: ', natur(50));
 
 // === Task 3 - 178 v ===
 
@@ -40,7 +40,7 @@ function square(n) {
     }
     return { length: arr.length, array: arr};
 }
-//console.log(square(10))
+// console.log(square(10))
 
 // === Task 4 - 554 Pythagorean triple ===
 
