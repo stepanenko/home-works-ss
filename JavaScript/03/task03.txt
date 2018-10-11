@@ -1,0 +1,18 @@
+TASK: create two modules of inputing values:
+
+1. Give input from terminal
+
+https://stackoverflow.com/questions/4351521/how-do-i-pass-command-line-arguments-to-a-node-js-program
+
+2. 
+ - interactive iputs
+ - on double enter stop giving values
+ - read stream
+ - enter
+ - code 13?
+ - optional: inputs validations
+
+3. optional: input from another file
+
+ Node: env = [environment variables], [argv], process, host, config
+  - [port via || ], [set - to set env var]
