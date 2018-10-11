@@ -1,0 +1,7 @@
+extends layout
+
+block content
+    h1 #{title}
+    ul
+      each client, i in clients
+        li= client.name
