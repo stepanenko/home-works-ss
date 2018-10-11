@@ -4,12 +4,8 @@ const fs = require('fs');
 
 const app = express();
 
-app.use(express.json());
-
 let json = require('./clients.json');
-let clients = JSON.parse(JSON.stringify(json)); // works well
-
-console.log(typeof clients); // OBJECT
+let clients = JSON.parse(JSON.stringify(json)); // typeof clients = OBJECT
 
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');

@@ -2,6 +2,13 @@ extends layout
 
 block content
     h1 #{title}
-    ul
-      each client, i in clients
-        li= client.name
+    table(style='width:30%', border='1')
+      tr
+        th Id
+        th Name
+        th Age
+      each client in clients
+        tr
+          td= client.id
+          td= client.name
+          td= client.age
