@@ -55,5 +55,11 @@ function tris(n) {
 }
 //console.log('Pythagorean triples: \n', tris(100));
 
+module.exports = {
+    natur,
+    square,
+    tris
+};
+
 // About Pythagorean triple:
 // http://www.athens.kiev.ua/pifagorovi-trijki/
