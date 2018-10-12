@@ -1,0 +1,9 @@
+Node Task: 
+ - add buttons: add, delete, edit (use forms, 'submit'[make it not using default, meaning not refreshing the page]...)
+ - use URL like /users/delete/id - to delete...
+ - CRUD
+ - no changing to json or database
+ - as close to REST as possible
+ - just URL using, no jQuery or AJAX
+ - URL: 1 get and 3 posts
+ - make clone of project and a copy should work only with JSONs
