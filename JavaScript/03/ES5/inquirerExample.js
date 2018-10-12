@@ -22,5 +22,5 @@ var questions = [
 ];
 
 inquirer.prompt(questions, (answer) => {
-  console.log(answer);       // doesnt log an answer
+  console.log(answer.toString());       // doesnt log an answer
 });

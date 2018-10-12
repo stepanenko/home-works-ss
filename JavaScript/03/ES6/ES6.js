@@ -11,7 +11,7 @@ const nat = n => {
   }
   return array;
 }
-console.log('Array length: ', nat(10));
+//console.log('Array length: ', nat(10));
 
 // === Task 2 - 178 b ===
 
@@ -24,7 +24,7 @@ const natur = n => {
   }
   return [arr1, arr2];
 }
-console.log('Arrays of 3s and n5: ', natur(50));
+//console.log('Arrays of 3s and n5: ', natur(50));
 
 // === Task 3 - 178 v ===
 
@@ -37,7 +37,7 @@ const square = n => {
   }
   return { length: arr.length, array: arr}
 }
-console.log(square(10))
+//console.log(square(10))
 
 // === Task 4 - 554 ===
 
@@ -53,8 +53,19 @@ const tris = n => {
   }
   return tri
 }
-console.log('Pythagorean triple: \n', tris(100))
-
+//console.log('Pythagorean triple: \n', tris(100))
 
 // About Pythagorean triple:
 // http://www.athens.kiev.ua/pifagorovi-trijki/
+
+
+process.stdout.write('Enter the array length: ');
+
+process.stdin.on('data', (answer) => {
+  //console.log(answer.toString());
+  console.log('Pythagorean triple: \n', tris(answer));
+  process.exit();
+});
+
+
+
