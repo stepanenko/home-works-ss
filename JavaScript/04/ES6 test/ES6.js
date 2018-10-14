@@ -1,17 +1,13 @@
 
 // === Task 1 - 178 a ===
-const nat = n => {
-  let arr = [];
-  let array = [];
-  for (let i = 0; i < n; i++) {
-    arr = [...arr, i];
-    if (i % 2 !== 0) {
-      array = [...array, i]
-    }
-  }
-  return array;
-}
-//console.log('Array length: ', nat(10));
+const ArrayFilter = require('./Fun');
+
+let array = new ArrayFilter(20);
+// array = array.arrFill();
+array = array.odd();
+console.log(array);
+
+
 
 // === Task 2 - 178 b ===
 
@@ -58,14 +54,14 @@ const tris = n => {
 // About Pythagorean triple:
 // http://www.athens.kiev.ua/pifagorovi-trijki/
 
+// === INTERACTIVE TERMINAL ===
+// process.stdout.write('Enter the array length: ');
 
-process.stdout.write('Enter the array length: ');
-
-process.stdin.on('data', (answer) => {
-  //console.log(answer.toString());
-  console.log('Pythagorean triple: \n', tris(answer));
-  process.exit();
-});
+// process.stdin.on('data', (answer) => {
+//   //console.log(answer.toString());
+//   console.log('Pythagorean triple: \n', tris(answer));
+//   process.exit();
+// });
 
 
 
