@@ -1,10 +1,10 @@
 
 // === Task 1 - 178 a ===
-const ArrayFilter = require('./Fun');
+const ArrayFilter = require('./Task1');
 
-let array = new ArrayFilter(20);
-// array = array.arrFill();
-array = array.odd();
+let array = new ArrayFilter(5);
+array = array.arrFill();
+// array = array.odd();
 console.log(array);
 
 

@@ -1,4 +1,4 @@
-module.exports = class ArrayFilter {
+class ArrayFilter {
 
   constructor(len) {
     this.len = len;
