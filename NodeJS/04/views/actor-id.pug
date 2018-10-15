@@ -1,0 +1,7 @@
+extends layout
+
+block content
+  h1 Actors
+  ul
+    each actor in actors
+      li= "name: " + actor.name

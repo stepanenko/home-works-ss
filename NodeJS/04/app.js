@@ -1,0 +1,72 @@
+const express = require('express');
+const path = require('path');
+
+const app = express();
+
+const actors = [
+  {
+    id: 1,
+    name: "Tom",
+    age : 52
+  },
+  {
+    id: 2,
+    name: "Jackie",
+    age: 60
+  },
+  {
+    id: 3,
+    name: "Jessica",
+    age: 41
+  },
+  {
+    id: 4,
+    name: "Alicia",
+    age: 30
+  }
+];
+
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'pug');
+
+app.get('/api/actors', (req, res) => {
+  res.render('actors', {
+    actors: actors
+  });
+});
+
+app.get('/api/actors/:id', (req, res) => {
+  const actor = actors.filter((val) => val.id == req.params.id);
+  // console.log(req.params.id);
+  // console.log(actor);
+  res.render('actors', {
+    actors: actor
+  });
+});
+
+app.post('/api/actors', (req, res) => {
+  const actor = {
+    id: actors.length + 1,
+    name: req.body.name,
+    age: req.body.age
+  };
+  actors.push(actor);
+  res.redirect('/api/actors');
+});
+
+app.put('/api/actors', (req, res) => {
+  const index = actors.findIndex(val => val.id == req.body.id);
+  actors[index].name = req.body.name;
+  actors[index].age = req.body.age;
+  console.log(index);
+  res.redirect('/api/actors');
+});
+
+app.get('/about', (req, res) => {
+  res.render('about');
+});
+
+app.listen(3000, () => console.log('Listening...'));

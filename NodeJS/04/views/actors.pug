@@ -1,0 +1,32 @@
+extends layout
+
+block content
+  h1 Actors:
+  div.add-actor 
+    h3 Add Actor:
+    form(action='/api/actors' method='post')
+      label(for='name') Name: 
+      input(type='text' name='name')
+      label(for='age') Age: 
+      input(type='text' name='age')
+      input(type='submit')
+  div.edit-actor
+    h3 Edit Actor:
+    form(action='/api/actors' method='put')
+      label(for='id') Id: 
+      input(type='text' name='id')
+      label(for='name') Name: 
+      input(type='text' name='name')
+      label(for='age') Age: 
+      input(type='text' name='age')
+      input(type='submit')  
+  div.delete-actor
+    h3 Delete Actor:
+    form(action='/api/actors/' method='delete')
+      label(for='id') Id: 
+      input(type='number' name='id')
+      input(type='submit')  
+  ul
+    each actor in actors
+      li
+        = "Name: " + actor.name + ",  age:" + actor.age
