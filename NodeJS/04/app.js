@@ -57,11 +57,18 @@ app.post('/api/actors', (req, res) => {
   res.redirect('/api/actors');
 });
 
-app.put('/api/actors', (req, res) => {
+app.post('/api/actors/edit', (req, res) => {
   const index = actors.findIndex(val => val.id == req.body.id);
   actors[index].name = req.body.name;
   actors[index].age = req.body.age;
-  console.log(index);
+  res.redirect('/api/actors');
+});
+
+app.post('/api/actors/delete', (req, res) => {
+  const index = actors.findIndex(val => val.id == req.body.id);
+  if (index > -1) {
+    actors.splice(index, 1);
+  } else res.send(`An actor with id ${req.body.id} was not found`);
   res.redirect('/api/actors');
 });
 
