@@ -12,12 +12,11 @@ function nat(n) {
     return array;
 }
 //Testing with Jasmine
-// describe('Generate an array:', function() {
-//     it('should create an array like [1, 3, ...]', function() {
-//         expect(nat(5)).toEqual([1, 3])
-//     })
-// });
-//console.log('Array: ', nat(5));
+describe('Generate an array:', function() {
+    it('should create an array like [1, 3, ...]', function() {
+        expect(nat(5)).toEqual([1, 3])
+    });
+});
 
 // === Task 2 - 178 b ===
 
@@ -33,10 +32,11 @@ function natur(n) {
 // Testing Task 2 with Jasmine:
 describe('Functionality of Natur():', function() {
     it('should ouput a specific arrays', function() {
-        expect(natur(10)).toEqual([[0,3,6,9],[0,5]])
-    })
-})
-//  console.log('Arrays of 3s and n5: ', natur(10)); 
+        expect(natur(10)).toEqual([[0,3,6,9],[0,5]]);
+        expect(natur(5)).toEqual([[0, 3],[0]]);
+        expect(natur(20).length).toEqual(2);
+    });
+});
 
 // === Task 3 - 178 v ===
 
@@ -49,7 +49,15 @@ function square(n) {
     }
     return { length: arr.length, array: arr};
 }
-// console.log(square(10))
+
+// Testing square(n) ...
+describe('Function output', function() {
+    it('should output quares of specific length', function() {
+        expect(square(5)).toEqual({ length: 3, array: [0, 4, 16]});
+        expect(square(8)).toEqual({ length: 4, array: [0, 4, 16, 36]});
+
+    });
+});
 
 // === Task 4 - 554 Pythagorean triple ===
 
@@ -65,13 +73,11 @@ function tris(n) {
     }
     return tri;
 }
-//console.log('Pythagorean triples: \n', tris(100));
 
-module.exports = {
-    natur,
-    square,
-    tris
-};
-
-// About Pythagorean triple:
-// http://www.athens.kiev.ua/pifagorovi-trijki/
+// Testing tris(n) ...
+describe('Correct output of function', function () {
+    it('should show Pythagorean triples', function() {
+        expect(tris(25).length).toEqual(3);
+        expect(tris(14)).toEqual([[3,4,5],[5,12,13]]);
+    });
+});
