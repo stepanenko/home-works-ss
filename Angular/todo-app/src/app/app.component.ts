@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-     
+
 class Item{
     task: string;
     done: boolean;

@@ -7,14 +7,15 @@ import { Component } from '@angular/core';
     styleUrls: ['./app.component.css']
 })
 export class AppComponent { 
+    name: string = 'Allen';
     firstname = 'Tom';
-    age = 25;
+    age: number = 25;
     myname: string = "Jack";
     count: number = 0;
     increase($event:any) : void {
         this.count++;
         console.log($event);
-    }
+    };
 }
 
 
