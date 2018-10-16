@@ -40,8 +40,6 @@ app.get('/api/actors', (req, res) => {
 
 app.get('/api/actors/:id', (req, res) => {
   const actor = actors.filter((val) => val.id == req.params.id);
-  // console.log(req.params.id);
-  // console.log(actor);
   res.render('actors', {
     actors: actor
   });
