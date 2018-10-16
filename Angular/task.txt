@@ -1,0 +1,7 @@
+0. prev task
+1. GitHub: Jasmine, Travis
+2. Node: method override. Heroku
+3. Angular: Service, Component (shows)
+
+  Service returns an array (class) will have GET and DELETE. Run from component.
+  Component renders data
