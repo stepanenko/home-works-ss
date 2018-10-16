@@ -1,11 +1,25 @@
 import { Component } from '@angular/core';
      
+
 @Component({
-    selector: 'my-app',
-    template: `<label>Введите имя:</label>
-                 <input [(ngModel)]="name" placeholder="name">
-                 <h1>Добро пожаловать {{name}}!</h1>`
+    selector: 'hello-app',
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.css']
 })
 export class AppComponent { 
-    name= '';
+    firstname = 'Tom';
+    age = 25;
+    myname: string = "Jack";
+    count: number = 0;
+    increase($event:any) : void {
+        this.count++;
+        console.log($event);
+    }
 }
+
+
+
+
+
+
+//From first task on https://metanit.com/web/angular2/1.1.php
