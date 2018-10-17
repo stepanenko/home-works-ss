@@ -1,4 +1,5 @@
 const express = require('express');
+const methodOverride = require('method-override');
 
 const app = express();
 
@@ -22,6 +23,9 @@ const cars = [
     year: 2018
   }
 ];
+
+app.use(methodOverride('X-HTTP-Method-Override', {options:['POST', 'GET']}));
+// app.use(methodOverride('_method', {options:['POST', 'GET']}));
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
