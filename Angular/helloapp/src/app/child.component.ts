@@ -10,5 +10,11 @@ import { Input, Component } from '@angular/core';
 })
 export class ChildComponent { 
   @Input() userName: string;
-  @Input() userAge: number;
+  _userAge: number;
+
+  @Input() 
+  set userAge(age:number) {
+    if (age < 0)
+      this._userAge = 0;
+  }
 }
