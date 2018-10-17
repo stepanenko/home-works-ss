@@ -5,7 +5,7 @@ import { Component, OnInit } from '@angular/core';
   template: `
     <footer class="footer">
       <div class="container content has-text-centered">
-        <p>Made with Love</p>
+        <p>Made with Love by Serhiy Stepanenko &copy; 2018-2019</p>
       </div>
     </footer>
   `,

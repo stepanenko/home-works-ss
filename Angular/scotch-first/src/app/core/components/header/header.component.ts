@@ -5,7 +5,7 @@ import { Component, OnInit } from '@angular/core';
   template: `
     <div class="navbar is-dark">
       <div class="navbar-brand">
-        <a class="navbar-item">
+        <a class="navbar-item" routerLink="/">
           <img src="src/assets/img/angular-logo.png">
         </a>
       </div>
