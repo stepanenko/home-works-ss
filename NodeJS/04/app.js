@@ -76,5 +76,9 @@ app.get('/about', (req, res) => {
   res.render('about');
 });
 
+app.get('/', (req, res) => {
+  res.redirect('/api/actors');
+});
+
 const port = process.env.PORT || 3000;
 app.listen(port, () => console.log('Listening...'));
