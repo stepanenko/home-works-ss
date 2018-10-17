@@ -9,7 +9,7 @@ import { Component } from '@angular/core';
 export class AppComponent { 
     name: string = 'Allen';
     firstname = 'Tom';
-    age: number = 25;
+    age: number = 120;
     myname: string = "Jack";
     count: number = 0;
     increase($event:any) : void {

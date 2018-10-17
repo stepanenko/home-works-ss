@@ -1,0 +1,2 @@
+Angular 6 (17.10.18)
+ - create table task (prev task) with Service (?)
