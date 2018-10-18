@@ -1,15 +1,16 @@
 import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
+import { CarListComponent } from "./car-list/car-list.component";
 
 const routes: Routes = [
   {
     path: "",
-    //component: ""
+    component: CarListComponent
   },
-  {
-    path: ":carname",
-   // component: ""
-  }
+  // {
+  //   path: ":carname",
+  //   component: 
+  // }
 ];
 
 @NgModule({
