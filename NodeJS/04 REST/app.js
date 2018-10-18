@@ -1,5 +1,7 @@
 const express = require('express');
 const methodOverride = require('method-override');
+const helmet = require('helmet');
+const compression = require('compression');
 
 const app = express();
 
@@ -21,14 +23,37 @@ const cars = [
     make: "Audi",
     model: "Q7",
     year: 2018
+  },
+  {
+    id: 4,
+    make: "BMW",
+    model: "307",
+    year: 2013
+  },
+  {
+    id: 5,
+    make: "Opel",
+    model: "Astra",
+    year: 2017
   }
 ];
 
-app.use(methodOverride('X-HTTP-Method-Override', {options:['POST', 'GET']}));
-// app.use(methodOverride('_method', {options:['POST', 'GET']}));
+app.use(helmet());
+app.use(compression());
+app.use(methodOverride('X-HTTP-Method-Override'));
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+
+app.get('/', (req, res) => {
+  res.send({
+    "GET /api/cars" : "displaying all cars",
+    "GET /api/cars/:id": "display single car by id",
+    "POST /api/cars": "adding a car",
+    "PUT /api/cars/:id": "editing a car",
+    "DELETE /api/cars/:id": "deleting a car by id"
+  })
+});
 
 app.get('/api/cars', (req,res) => {
   res.send(cars);
@@ -68,4 +93,5 @@ app.delete('/api/cars/:id', (req, res) => {
   res.send(deleted);
 });
 
-app.listen(3000, () => console.log('Listening...'));
+const port = process.env.PORT || 3000;
+app.listen(port, () => console.log(`Listening on port ${port}...`));
