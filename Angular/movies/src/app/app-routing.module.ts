@@ -13,10 +13,10 @@ const routes: Routes = [
     path: 'movies',
     component: MoviesComponent
   },
-  {
-    path: 'cars',
-    loadChildren: 'src/app/cars/cars.module#CarsModule'
-  }
+  // {
+  //   path: 'cars',
+  //   loadChildren: 'src/app/cars/cars.module#CarsModule'
+  // }
 ];
 
 @NgModule({
