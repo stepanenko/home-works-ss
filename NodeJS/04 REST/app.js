@@ -40,10 +40,23 @@ const cars = [
 
 app.use(helmet());
 app.use(compression());
-app.use(methodOverride('X-HTTP-Method-Override'));
+app.use(methodOverride('X-HTTP-Method-Override', {methods: ["POST", "GET"]}));
+app.use(methodOverride("_method", {methods: ["POST", "GET"]}));
+
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use((req, res, next) => {
+  // Website you wish to allow to connect
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  // Request methods you wish to allow
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+  // Request headers you wish to allow
+  res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
+  
+  next();
+});
+
 
 app.get('/', (req, res) => {
   res.send({

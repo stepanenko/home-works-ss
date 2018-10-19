@@ -10,6 +10,7 @@ import { MoviesComponent } from './movies/movies.component';
 import { CoreModule } from './core/core.module';
 import { UsersComponent } from './users/users.component';
 import { UserService } from './user.service';
+import { CarsComponent } from './cars/cars.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { UserService } from './user.service';
     AppComponent,
     HomeComponent,
     MoviesComponent,
-    UsersComponent
+    UsersComponent,
+    CarsComponent
   ],
   imports: [
     BrowserModule,
