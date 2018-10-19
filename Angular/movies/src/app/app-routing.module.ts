@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { MoviesComponent } from './movies/movies.component';
+import { UsersComponent } from './users/users.component';
 
 const routes: Routes = [
   {
@@ -14,8 +15,12 @@ const routes: Routes = [
     component: MoviesComponent
   },
   {
+    path: 'users',
+    component: UsersComponent
+  },
+  {
     path: 'cars',
-    loadChildren: 'src/app/cars/cars.module#CarsModule'
+    loadChildren: './cars/cars.module#CarsModule'
   }
 ];
 

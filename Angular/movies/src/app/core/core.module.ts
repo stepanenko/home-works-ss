@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { CarsModule } from '../cars/cars.module';
+import { CarService } from './services/car.service';
 
 @NgModule({
   imports: [
@@ -19,7 +19,7 @@ import { CarsModule } from '../cars/cars.module';
     FooterComponent
   ],
   providers: [
-    CarsModule
+    CarService
   ]
 })
 export class CoreModule {}
