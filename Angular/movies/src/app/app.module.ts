@@ -11,6 +11,7 @@ import { CoreModule } from './core/core.module';
 import { UsersComponent } from './users/users.component';
 import { UserService } from './user.service';
 import { CarsComponent } from './cars/cars.component';
+import { CarsService } from './cars.service';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { CarsComponent } from './cars/cars.component';
     CoreModule
   ],
   providers: [
-    UserService
+    UserService,
+    CarsService
   ],
   bootstrap: [AppComponent]
 })
