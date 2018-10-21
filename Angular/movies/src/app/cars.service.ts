@@ -6,10 +6,15 @@ import { HttpClient } from '@angular/common/http';
 })
 export class CarsService {
 
+  private url = 'https://carsnode.herokuapp.com/api/cars';
+
   constructor(private http: HttpClient) {}
 
   getCars() {
     return this.http
-      .get('https://carsnode.herokuapp.com/api/cars')
+      .get(this.url)
   }
+
+  
+
 }
