@@ -25,7 +25,7 @@ const routes: Routes = [
     component: CarsComponent
   },
   {
-    path: 'auto',
+    path: 'cars-edit',
     component: AutoComponent
   }
 ];

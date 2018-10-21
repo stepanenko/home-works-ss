@@ -12,6 +12,7 @@ import { UsersComponent } from './users/users.component';
 import { UserService } from './user.service';
 import { CarsComponent } from './cars/cars.component';
 import { CarsService } from './cars.service';
+import { AutoComponent } from './auto/auto.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { CarsService } from './cars.service';
     HomeComponent,
     MoviesComponent,
     UsersComponent,
-    CarsComponent
+    CarsComponent,
+    AutoComponent
   ],
   imports: [
     BrowserModule,
