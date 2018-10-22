@@ -1,23 +1,37 @@
 import { Component } from '@angular/core';
 
+interface Passenger {
+  id: number,
+  fullname: string,
+  checkedIn: boolean
+}
+
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
-  styles: []
+  styleUrls: ['app.component.css']
 })
 export class AppComponent {
-
-  name: string = 'Todd';
-
-  handleClick() {
-    this.name = "Sergio"
+  passengers: Passenger[] = [{
+    id: 1,
+    fullname: 'Stephen',
+    checkedIn: true
+  }, {
+    id: 2,
+    fullname: 'Rose',
+    checkedIn: false
+  }, {
+    id: 3,
+    fullname: 'James',
+    checkedIn: true
+  }, {
+    id: 4,
+    fullname: 'Luise',
+    checkedIn: true
+  }, {
+    id: 5,
+    fullname: 'Tina',
+    checkedIn: false
   }
-  handleInput(event: any) {
-    this.name = event.target.value
-  }
-  handleBlur(event: any) {
-    this.name = event.target.value
-    console.log(event)
-  }
-  
+  ]
 }
