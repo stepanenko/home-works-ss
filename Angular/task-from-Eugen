@@ -1,0 +1,33 @@
+Sass / Less
+Material / material.angular
+Bootstrap (not using)
+Flex - css
+Responsive
+ngRX (effects)
+Redux
+Firebase (Auth...)
+JIT (just in time) vs AOT (ahead of time) compilation (is new and better)
+
+Routing: login -> new-user
+  Login Form with Validation: min 4 symbols, no special symbols
+  Pass: 8 letters, 1 special char, 1 number
+  Save? (no changing from inspect developer menu)
+  Use Reactive Forms
+  RxJS (remin Eugen to send a book) - very important
+  Observables (.subscribe(val => ...), .pipe(...))
+  Modal Windows (+routings)
+   - no tokens yet
+
+Style Guide - from Angular.io
+
+store.dispatch({
+  type: LIST..,
+  payload: this.students
+})
+const LIST_LOAD_SUCCESS = [StudentList]ListLoaded;
+reducer(action) {
+  switch(action) {
+    case: list
+      return (...state, students...)
+  }
+}
