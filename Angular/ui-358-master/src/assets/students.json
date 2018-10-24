@@ -1,0 +1,13 @@
+  [
+    {
+      "id" : 1,
+      "name" : "Tom",
+      "surname" : "Cruise",
+      "phone" : "0632909118",
+      "birthdate" : "25.05.90",
+      "address" : "Naukova",
+      "group" : "22",
+      "email" : "tom@cruise.com",
+      "password" : "tomc"
+    }
+  ]

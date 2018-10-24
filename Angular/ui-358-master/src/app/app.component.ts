@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.sass']
 })
 export class AppComponent {
-  title = 'lv358';
+  constructor(private httpService: HttpClient) {}
+
+  students: string [];
+
+  ngOnInit () {
+    this.httpService.get('./assets/students.json')
+      .subscribe(data => {
+        this.students = data as string[];
+          console.log(this.students);
+      });
+  }
 }

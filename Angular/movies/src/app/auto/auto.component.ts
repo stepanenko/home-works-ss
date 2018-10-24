@@ -14,41 +14,40 @@ export class AutoComponent {
     http.get(this.url)
       .subscribe(response => {
           this.autos = response;
-      })
+      });
   }
 
   addAuto(id, make, model, year) {
-    let auto = {
+    const auto = {
       id: id.value,
       make: make.value,
       model: model.value,
       year: year.value
-    }
+    };
     this.http.post(this.url, auto)
       .subscribe(response => {
-        this.autos.push(auto)
+        this.autos.push(auto);
         console.log(response);
-      })
+      });
   }
 
   editAuto(id, make, model, year) {
-    let auto = this.autos.find(auto => auto.id == id.value);
+    const auto = this.autos.find(auto => auto.id == id.value);
     auto.make = make.value;
     auto.model = model.value;
     auto.year = year.value;
     this.http.put(this.url + '/' + auto.id, auto)
       .subscribe(response => {
-        console.log(response)
-    })
+        console.log(response);
+    });
   }
 
   deleteAuto(auto) {
     this.http.delete(this.url + '/' + auto.id)
       .subscribe(response => {
-        let index = this.autos.indexOf(auto)
-        this.autos.splice(index, 1)
-        console.log(response)
-      })
+        let index = this.autos.indexOf(auto);
+        this.autos.splice(index, 1);
+        console.log(response);
+      });
   }
-
 }

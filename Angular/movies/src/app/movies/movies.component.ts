@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
-class Movie{
+class Movie {
   id: number;
   title: string;
   year: number;
 
-  constructor(id ,title, year) {
+  constructor(id, title, year) {
     this.id = id;
     this.title = title;
     this.year = year;
@@ -47,11 +47,10 @@ export class MoviesComponent implements OnInit {
 
   editMovie(id, title, year) {
     if (id == null) return;
-    const index = this.movies.findIndex(movie => movie.id == id)
+    const index = this.movies.findIndex(movie => movie.id == id);
     if (index > -1) {
       this.movies[index].title = title;
       this.movies[index].year = year;
     }
   }
-
 }
