@@ -18,7 +18,8 @@ export class StudentsComponent implements OnInit {
     this.getStudents();
   }
   getStudents(): void {
-    this.students = this.studentService.getStudents();
+    this.studentService.getStudents()
+      .subscribe((students) => this.students = students);
   }
 
   onSelect(student: Student): void {
