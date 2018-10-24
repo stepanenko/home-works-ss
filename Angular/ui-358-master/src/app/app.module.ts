@@ -1,33 +1,22 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-// import {
-//   MatInputModule,
-//   MatCardModule,
-//   MatButtonModule,
-//   MatToolbarModule,
-//   MatExpansionModule } from '@angular/material';
-import { HttpClient } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { StudListComponent } from './students/stud-list/stud-list.component';
-import { FormsModule } from '@angular/forms';
+import { StudentsComponent } from './students/students.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    StudListComponent
+    StudentsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    // MatExpansionModule,
-    // FormsModule,
-    // MatInputModule,
-    // MatCardModule,
-    // MatButtonModule,
-    // MatToolbarModule,
-    HttpClient
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

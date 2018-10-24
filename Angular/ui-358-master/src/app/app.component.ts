@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 @Component({
@@ -6,13 +6,14 @@ import { HttpClient } from '@angular/common/http';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.sass']
 })
-export class AppComponent {
-  constructor(private httpService: HttpClient) {}
+export class AppComponent implements OnInit {
+  constructor(private http: HttpClient) {
+  }
 
   students: string [];
 
   ngOnInit () {
-    this.httpService.get('./assets/students.json')
+    this.http.get('./assets/students.json')
       .subscribe(data => {
         this.students = data as string[];
           console.log(this.students);
