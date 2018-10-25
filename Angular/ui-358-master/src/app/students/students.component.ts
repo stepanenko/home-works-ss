@@ -1,3 +1,4 @@
+
 import { Component, OnInit } from '@angular/core';
 import { Student } from '../student';
 import { StudentService } from '../student.service';
@@ -10,7 +11,7 @@ import { StudentService } from '../student.service';
 export class StudentsComponent implements OnInit {
 
   students: Student[];
-  selectedStudent: Student;
+  // selectedStudent: Student;
 
   constructor(private studentService: StudentService) {}
 
@@ -22,8 +23,8 @@ export class StudentsComponent implements OnInit {
       .subscribe((students) => this.students = students);
   }
 
-  onSelect(student: Student): void {
-    this.selectedStudent = student;
-  }
+  // onSelect(student: Student): void {
+  //   this.selectedStudent = student;
+  // }
 
 }

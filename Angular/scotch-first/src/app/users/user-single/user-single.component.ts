@@ -28,7 +28,7 @@ export class UserSingleComponent implements OnInit {
 
   ngOnInit() {
     // grab the username out of the url
-    this.route.params.subscribe(params => {
+    this.route.params.subscribe((params) => {
       const username = params['username'];
       
       // use the userservice to get data from github api
