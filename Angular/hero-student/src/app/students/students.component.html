@@ -2,9 +2,9 @@
 <h2>Students List:</h2>
 <ul class="students">
   <li
-    *ngFor="let student of students"
-    [class.selected]="student === selectedStudent"
-    (click)="onSelect(student)">
+    *ngFor="let student of students">
+    <!-- [class.selected]="student === selectedStudent"
+    (click)="onSelect(student)"> -->
     <a routerLink="/detail/{{ student.id }}"><span class="badge">{{ student.id }}</span> {{ student.name }}</a>
   </li>
 </ul>

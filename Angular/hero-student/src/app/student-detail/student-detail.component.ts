@@ -32,4 +32,8 @@ export class StudentDetailComponent implements OnInit {
       .subscribe((student) => this.student = student);
   }
 
+  goBack() {
+    this.location.back();
+  }
+
 }
