@@ -18,12 +18,10 @@ export class AppComponent implements OnInit {
     this.http.get('./assets/students.json')
       .subscribe((data) => {
         this.students = data as Student[];
-        // console.log(this.students);
       });
   }
 
   selectStudent(student) {
     this.activeStudent = student;
-    // console.log(this.activeStudent);
   }
 }

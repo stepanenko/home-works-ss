@@ -1,4 +1,8 @@
 
 * {
-  font-family: 'Fira Mono', Tahoma;
+  font-family: Arial, Tahoma;
+}
+
+body {
+  padding: 30px;
 }
