@@ -1,0 +1,12 @@
+li {
+  list-style: none;
+  padding: 10px;
+  cursor: pointer;
+  width: 150px;
+  background: #95bbd1;
+}
+
+.active {
+  background: #134f94;
+  color: white;
+}
