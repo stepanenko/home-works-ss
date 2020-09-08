@@ -1,5 +1,6 @@
-var sqrt = require('./mathES5')
-console.log(sqrt(25))
+
+var sqrt = require('./mathES5');
+console.log(sqrt(25));
 
 // === Task 1 - 178 a ===
 
@@ -13,7 +14,7 @@ function nat(n) {
   return array.length;
 }
 
-//console.log('Array length: ', nat(10));
+// console.log('Array length: ', nat(10));
 
 // === Task 2 - 178 b ===
 
@@ -27,18 +28,18 @@ function natur(n) {
   return [arr1, arr2];
 }
 
-//console.log('Arrays of 3s and n5: ', natur(50));
+// console.log('Arrays of 3s and n5: ', natur(50));
 
 // === Task 3 - 178 v ===
 
 function square(n) {
   var arr = [];
   for (var i = 0; i < n; i++) {
-     if (i % 2 === 0) {
-       arr.push(i * i);
-     }
+    if (i % 2 === 0) {
+      arr.push(i * i);
+    }
   }
-  return { length: arr.length, array: arr}
+  return { length: arr.length, array: arr };
 }
 // console.log(square(10))
 
@@ -54,9 +55,9 @@ function tris(n) {
       tri.push([sqrt(sub), sqrt(current), sqrt(next)]);
     }
   }
-  return tri
+  return tri;
 }
-console.log('Pythagorean triples: \n', tris(100))
+console.log('Pythagorean triples: \n', tris(100));
 
 
 // About Pythagorean triple:

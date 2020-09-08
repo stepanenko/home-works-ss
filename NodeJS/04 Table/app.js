@@ -9,7 +9,7 @@ const actors = [
   {
     id: 1,
     name: "Tom",
-    age : 52
+    age: 52
   },
   {
     id: 2,

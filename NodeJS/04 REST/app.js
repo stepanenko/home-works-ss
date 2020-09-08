@@ -40,8 +40,8 @@ const cars = [
 
 app.use(helmet());
 app.use(compression());
-app.use(methodOverride('X-HTTP-Method-Override', {methods: ["POST", "GET"]}));
-app.use(methodOverride("_method", {methods: ["POST", "GET"]}));
+app.use(methodOverride('X-HTTP-Method-Override', { methods: ["POST", "GET"] }));
+app.use(methodOverride("_method", { methods: ["POST", "GET"] }));
 
 
 app.use(express.json());
@@ -53,14 +53,14 @@ app.use((req, res, next) => {
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
   // Request headers you wish to allow
   res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
-  
+
   next();
 });
 
 
 app.get('/', (req, res) => {
   res.send({
-    "GET /api/cars" : "displaying all cars",
+    "GET /api/cars": "displaying all cars",
     "GET /api/cars/:id": "display single car by id",
     "POST /api/cars": "adding a car",
     "PUT /api/cars/:id": "editing a car",
@@ -68,7 +68,7 @@ app.get('/', (req, res) => {
   })
 });
 
-app.get('/api/cars', (req,res) => {
+app.get('/api/cars', (req, res) => {
   res.send(cars);
 });
 

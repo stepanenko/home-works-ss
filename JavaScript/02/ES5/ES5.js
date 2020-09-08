@@ -1,3 +1,4 @@
+
 var sqrt = require('./mathES5');
 
 // === Task 1 - 178 a ===
@@ -11,7 +12,7 @@ function nat(n) {
     }
     return array;
 }
-//console.log('Array: ', nat(args[0]));
+// console.log('Array: ', nat(args[0]));
 
 // === Task 2 - 178 b ===
 
@@ -53,7 +54,7 @@ function tris(n) {
     }
     return tri;
 }
-//console.log('Pythagorean triples: \n', tris(100));
+// console.log('Pythagorean triples: \n', tris(100));
 
 // About Pythagorean triple:
 // http://www.athens.kiev.ua/pifagorovi-trijki/

@@ -1,3 +1,4 @@
+
 import { sqrt } from './mathES6';
 console.log(sqrt);
 
@@ -28,7 +29,7 @@ const natur = n => {
   return [arr1, arr2];
 }
 
-//console.log('Arrays of 3s and n5: ', natur(50));
+// console.log('Arrays of 3s and n5: ', natur(50));
 
 // === Task 3 - 178 v ===
 
@@ -42,7 +43,7 @@ const square = n => {
   return { length: arr.length, array: arr}
 }
 
-//console.log(square(10))
+// console.log(square(10))
 
 // === Task 4 - 554 ===
 
@@ -58,7 +59,7 @@ const tris = n => {
   }
   return tri
 }
-//console.log('Pythagorean triple: \n', tris(100))
+// console.log('Pythagorean triple: \n', tris(100))
 
 
 // About Pythagorean triple:

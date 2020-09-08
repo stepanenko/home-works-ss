@@ -6,5 +6,5 @@ describe('Testing the functionality', () => {
     const arr = array.arrFill();
 
     expect(array.arrFill().length).toBe(5);
-  })
-})
+  });
+});
