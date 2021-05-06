@@ -1,5 +1,3 @@
-# ScotchFirst
+## ScotchFirst
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.5.
-
-> The project needs updating
+Updated all on 7.05.2021

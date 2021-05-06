@@ -1,5 +1,4 @@
-# Cars
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.
+## Cars app
 
-> The project needs updating of all packages
+Updated all on 7.05.2021
