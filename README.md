@@ -3,4 +3,5 @@
 
 TODO:
 - move nodejs apps to nodejs-apps repo, place some into "Minimal apps" folder
-- update and move angular apps to angular-apps repo (create repo if not existing)
+- move angular apps to angular-apps repo (create repo if not existing)
+- move TS files from Angular folder to ts-info repo
