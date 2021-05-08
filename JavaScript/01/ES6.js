@@ -36,11 +36,11 @@ const natur = n => {
 const square = n => {
   const arr = [];
   for (let i = 0; i < n; i++) {
-     if (i % 2 === 0) {
-       arr.push(i * i);
-     }
+    if (i % 2 === 0) {
+      arr.push(i * i);
+    }
   }
-  return { length: arr.length, array: arr}
+  return { length: arr.length, array: arr }
 }
 
 // console.log(square(10))
@@ -53,7 +53,7 @@ const tris = n => {
     let current = i * i;
     let next = (i + 1) * (i + 1);
     let sub = next - current;
-    if ( Math.sqrt(sub) % 1 === 0) {
+    if (Math.sqrt(sub) % 1 === 0) {
       tri.push([Math.sqrt(sub), Math.sqrt(current), Math.sqrt(next)]);
     }
   }
